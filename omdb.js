@@ -13,9 +13,9 @@
 //     console.log(this.response)
 var count = 0
 function search(){
-    if(count != 0){
-        document.getElementById("editableDiv").remove()
-    }
+    // if(count != 0){
+    //     document.getElementById("editableDiv").remove()
+    // }
     var title = document.getElementById('searchTitle').value
     var xhr = new XMLHttpRequest();
     xhr.open("GET","http://www.omdbapi.com/?apikey=43517cd7&s="+title)
