@@ -13,9 +13,14 @@
 //     console.log(this.response)
 var count = 0
 function search(){
-    // if(count != 0){
-    //     document.getElementById("editableDiv").remove()
-    // }
+    if(count != 0){
+        document.getElementById("editableDiv").remove()
+    }
+
+    var editDiv = document.createElement('div')
+    editDiv.setAttribute("id","editableDiv")
+    document.getElementById("posters").append(editDiv)
+
     var title = document.getElementById('searchTitle').value
     var xhr = new XMLHttpRequest();
     xhr.open("GET","http://www.omdbapi.com/?apikey=43517cd7&s="+title)
@@ -25,9 +30,7 @@ function search(){
         var arr = JSON.parse(xhr.response)
         // console.log(arr.Search)
         // console.log(arr.Search.length)
-        var editDiv = document.createElement('div')
-        editDiv.setAttribute("id","editableDiv")
-        document.getElementById("posters").append(editDiv)
+
         
         for(var i = 0; i < arr.Search.length; i++){
             console.log(arr.Search[i].Title)
