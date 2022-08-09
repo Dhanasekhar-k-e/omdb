@@ -24,9 +24,9 @@ function search(){
         var arr = JSON.parse(xhr.response)
         // console.log(arr.Search)
         // console.log(arr.Search.length)
-        if(count != 0){
-            document.getElementById("editableDiv").remove()
-        }
+        // if(count != 0){
+        //     document.getElementById("editableDiv").remove()
+        // }
     
         var editDiv = document.createElement('div')
         editDiv.setAttribute("id","editableDiv")
