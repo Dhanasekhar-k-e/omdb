@@ -1,9 +1,28 @@
-#editableDiv{
+/* #editableDiv{
     display:grid;
     /* flex-direction:row;
     flex-grow: initial; */
-    grid-template-columns: auto auto auto ;
-}
+    grid-template-columns: auto auto auto auto auto;
+} */
 h1{
     text-align:center
+}
+@media (min-width: 576px) { 
+    #editableDiv{
+        display:grid;
+        grid-template-columns:auto;
+    }
+}
+
+@media (min-width: 768px) {
+    #editableDiv{
+        display:grid;
+        grid-template-columns:auto auto;
+    }
+}
+@media (min-width: 992px) { 
+    #editableDiv{
+        display:grid;
+        grid-template-columns:auto auto auto auto auto;
+    }
 }
