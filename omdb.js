@@ -33,18 +33,31 @@ function search(){
         document.getElementById("posters").append(editDiv)
         
         for(var i = 0; i < arr.Search.length; i++){
-            console.log(arr.Search[i].Title)
-            var block = document.createElement('div')
-            block.style.height = "340px"
-            block.style.width = "200px"
-            block.style.border = "1px solid black"
-            var image = document.createElement('img')
-            image.src = arr.Search[i].Poster
-            image.style.width = "200px"
-            image.style.height="300px"
-            var brk = document.createElement('br')
-            block.append(image,brk,arr.Search[i].Title,brk,arr.Search[i].Year)
-            document.getElementById("editableDiv").append(block)
+            
+            if(i % 6 == 0){
+                var row = document.createElement('div')
+                row.setAttribute('class','row')
+                editDiv.append(row)
+            }
+
+            var card = document.createElement('div')
+            card.setAttribute('class','card col-md-3 col-sm-12 col-lg-4')
+            row.append(card)
+           
+            var img = document.createElement('img')
+            img.setAttribute('class','card-img-top')
+            img.src = arr.Search[i].Poster
+            
+
+            var cardBody = document.createElement('div')
+            cardBody.setAttribute('class','card-body')
+            // img.append(cardBody)
+
+            var title = document.createElement('h5')
+            title.setAttribute('class','card-title font-size-auto')
+            title.innerText = arr.Search[i].Title
+            // cardBody.append(title)
+            card.append(img,cardBody,title)
         }
     }
     count++
