@@ -38,12 +38,14 @@ function search(){
             }
 
             var card = document.createElement('div')
-            card.setAttribute('class','card col-xs-12 col-md-4 col-sm-6 col-lg-2 p-2')
+            card.setAttribute('class','col-xs-12 col-md-4 col-sm-6 col-lg-2 p-2')
             card.style.backgroundColor = "turquoise"
             row.append(card)
            
             var img = document.createElement('img')
             img.setAttribute('class','card-img-top')
+            // img.style.width = "300px"
+            // img.style.height = "400px"
             img.src = arr.Search[i].Poster
             
 
@@ -52,12 +54,12 @@ function search(){
          
 
             var title = document.createElement('h5')
-            title.setAttribute('class','card-title')
+            // title.setAttribute('class','card-title')
             title.style.backgroundColor = "turquoise"
             title.innerText = arr.Search[i].Title
             
             var year = document.createElement('h5')
-            year.setAttribute('class','card-title')
+            // year.setAttribute('class','card-title')
             year.innerText = arr.Search[i].Year
 
             card.append(img,cardBody,title,year)
