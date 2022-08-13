@@ -41,7 +41,7 @@ function search(){
             }
 
             var card = document.createElement('div')
-            card.setAttribute('class','card col-md-3 col-sm-12 col-lg-4')
+            card.setAttribute('class','card col-md-4 col-sm-12 col-lg-2')
             row.append(card)
            
             var img = document.createElement('img')
