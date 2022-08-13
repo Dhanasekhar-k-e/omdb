@@ -22,12 +22,9 @@ function search(){
     xhr.open("GET","http://www.omdbapi.com/?apikey=43517cd7&s="+title)
     xhr.send()
     xhr.onload = function(){
-        // document.getElementById("demo").innerHTML = xhr.responseText
+       
         var arr = JSON.parse(xhr.response)
-        // console.log(arr.Search)
-        // console.log(arr.Search.length)
-      
-    
+ 
         var editDiv = document.createElement('div')
         editDiv.setAttribute("id","editableDiv")
         document.getElementById("posters").append(editDiv)
@@ -51,19 +48,15 @@ function search(){
 
             var cardBody = document.createElement('div')
             cardBody.setAttribute('class','card-body')
-            // img.append(cardBody)
+         
 
             var title = document.createElement('h5')
-            title.setAttribute('class','card-title font-size-auto')
+            title.setAttribute('class','card-title')
             title.innerText = arr.Search[i].Title
-            // cardBody.append(title)
+          
             card.append(img,cardBody,title)
         }
     }
     count++
 }
 
-
-// console.log(xhr.status)
-// console.log("hello")
-// console.log(xhr.respon)
