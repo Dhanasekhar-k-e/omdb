@@ -27,3 +27,15 @@
         grid-template-columns:auto auto auto auto auto;
     }
 } */
+
+input{
+    border-radius: 50px;
+    height:auto;
+}
+button{
+    border-radius:50px;
+    
+}
+h1{
+    color:lightslategrey
+}

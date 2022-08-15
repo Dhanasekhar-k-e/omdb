@@ -39,7 +39,7 @@ function search(){
 
             var card = document.createElement('div')
             card.setAttribute('class','col-xs-12 col-md-4 col-sm-6 col-lg-2 p-2')
-            card.style.backgroundColor = "turquoise"
+            card.style.backgroundColor = "black"
             row.append(card)
            
             var img = document.createElement('img')
@@ -55,12 +55,14 @@ function search(){
 
             var title = document.createElement('h5')
             // title.setAttribute('class','card-title')
-            title.style.backgroundColor = "turquoise"
+            title.style.backgroundColor = "black"
+            title.style.color = "white"
             title.innerText = arr.Search[i].Title
             
             var year = document.createElement('h5')
             // year.setAttribute('class','card-title')
             year.innerText = arr.Search[i].Year
+            year.style.color = "red"
 
             card.append(img,cardBody,title,year)
         }
